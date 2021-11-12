@@ -43,3 +43,9 @@ int	ft_padibx(const char arg, va_list list)
 {
 	return (ft_putsize(va_arg(list, unsigned int)), "0123456789ABCDEF", NULL);
 }
+int ft_padis(char *s)
+{
+	if (s)
+		return(write(1, s, ft_strlen(s)));
+	return (write(1, "(null)", 6));
+}

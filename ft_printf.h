@@ -10,7 +10,8 @@
 
 
 int	ft_padi(char arg, va_list list);
-int	ft_padics(const char arg, va_list list);
+int	ft_padic(char c);
+int ft_padis(char *s);
 int	ft_padidi(va_list list);
 int	ft_padiu(const char arg, va_list list);
 int	ft_padip(const char arg, va_list list);

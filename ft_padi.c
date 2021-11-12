@@ -17,12 +17,14 @@ int	ft_padi(char arg, va_list list)
 	int		r;
 
 	r = 0;
-	if (arg == 'c' || arg == 's')
-		r += ft_padics(arg, list);
+	if (arg == 'c')
+		return (ft_padic(va_arg(list, int)));
+	else if (arg == 's')
+		return (ft_padis(va_arg(list, char *)));
 	else if (arg == 'p')
 		r += ft_padip(arg, list);
 	else if (arg == 'd' || arg == 'i')
-		r += ft_padidi(list);
+		r += ft_padidi(va_arg(list, int));
 	else if (arg == 'x')
 		r += ft_padix(arg, list);
 	else if (arg == 'X')
@@ -31,30 +33,19 @@ int	ft_padi(char arg, va_list list)
 		r += ft_padip(arg, list);
 	else if (arg == '%')
 	{
-		r += write(1, '%', 1);
+		return (write(1, "%", 1));
 	}
 	return (r);
 }
 
-int	ft_padics(const char arg, va_list list)
+int	ft_padic(char c)
 {
-	int		r;
-
-	r = 0;
-	if (arg == 'c')
-	{
-		ft_putchar(list);
-		return (1);
-	}
-	else
-	{
-		return (ft_putstrc(list));
-	}
+	return (write(1, &c,1));
 }
 
-int	ft_padidi(va_list list)
+int	ft_padidi(int n)
 {
-	return (ft_putnbrc(list));
+	return (ft_putnbrc(n));
 }
 
 int	ft_padiu(const char arg, va_list list)
