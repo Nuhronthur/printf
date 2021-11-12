@@ -6,11 +6,12 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/26 09:40:28 by jovella           #+#    #+#             */
-/*   Updated: 2021/03/26 09:48:48 by jovella          ###   ########.fr       */
+/*   Updated: 2021/11/12 21:53:34 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;

@@ -6,7 +6,7 @@
 /*   By: jovella <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 12:58:14 by jovella           #+#    #+#             */
-/*   Updated: 2021/06/10 14:16:11 by jovella          ###   ########.fr       */
+/*   Updated: 2021/11/12 21:52:59 by jovella          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*strdup(const char *s)
 	int		j;
 	char	*dest;
 
-	dest = malloc((sizeof(char))*(ft_strlen(s) + 1));
+	dest = malloc((sizeof(char)) * (ft_strlen(s) + 1));
 	if (!dest)
 		return (NULL);
 	i = 0;
