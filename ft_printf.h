@@ -9,6 +9,14 @@
 # include "libft/libft.h"  
 
 
-int		ft_printf(const char *arg, ...);
-static int	ft_padi(const char *arg, va_list l);
+int	ft_padi(char arg, va_list list);
+int	ft_padics(const char arg, va_list list);
+int	ft_padidi(va_list list);
+int	ft_padiu(const char arg, va_list list);
+int	ft_padip(const char arg, va_list list);
+int	ft_padix(const char arg, va_list list);
+int	ft_padibx(const char arg, va_list list);
+static void	putbase(unsigned long long i, char *t);
+int	ft_putsize(unsigned long long i, char *t, void *ptr);
+int	ft_printf(const char *arg, ...);
 #endif

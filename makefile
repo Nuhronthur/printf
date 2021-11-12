@@ -2,12 +2,13 @@ NAME = printf.a
 
 SRCS = ft_printf.c\
 		ft_padi.c\
+		ft_tool.c
 
 LIBFT = libft
 
 OBJS	= ${SRCS:.c=.o}
 
-CC		= clang
+CC		= gcc
 
 RM		= rm -f
 

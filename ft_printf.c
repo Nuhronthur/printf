@@ -17,16 +17,13 @@ int	ft_printf(const char *arg, ...)
 	const char	*str;
 	va_list		list;
 	int			r;
-	int			p;
 
-	i = -1;
 	r = 0;
-	p = 0;
-	va_start(list, str);
+	va_start(list, arg);
 	while (*str)
 	{
 		if (*str == '%' && (++str))
-			r += padi(*str, list);
+			r += ft_padi(*str, list);
 		else
 		{
 			ft_putchar(*str);
@@ -34,6 +31,6 @@ int	ft_printf(const char *arg, ...)
 			str++;
 		}
 	}
-	va_end(arg);
+	va_end(list);
 	return (r);
 }

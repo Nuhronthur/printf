@@ -48,7 +48,7 @@ void			ft_putnbr_fd(int n, int fd);
 int				ft_putnbrc(int n);
 void			ft_putstr_fd(char *s, int fd);
 void			ft_putstr(char *s);
-int				ft_putstr(char *s);
+int				ft_putstrc(char *s);
 char			**ft_split(char const *s, char c);
 char			*ft_strchr(const char *s, int c);
 char			*strdup(const char *s);
