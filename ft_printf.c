@@ -17,18 +17,19 @@ int	ft_printf(const char *arg, ...)
 	const char	*str;
 	va_list		list;
 	int			r;
+	int			i;
 
 	r = 0;
+	i = 0;
 	va_start(list, arg);
-	while (*str)
+	while (str[i])
 	{
-		if (*str == '%' && (++str))
-			r += ft_padi(*str, list);
+		if (str[i] == '%' && (str[i +1]))
+			r += ft_padi(str[++i], list);
 		else
 		{
-			ft_putchar(*str);
-			r++;
-			str++;
+			r += write(1, &s[i], 1);
+			i++;
 		}
 	}
 	va_end(list);

@@ -31,8 +31,7 @@ int	ft_padi(char arg, va_list list)
 		r += ft_padip(arg, list);
 	else if (arg == '%')
 	{
-		write(1, '%', 1);
-		r += 1;
+		r += write(1, '%', 1);
 	}
 	return (r);
 }
