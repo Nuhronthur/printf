@@ -28,7 +28,7 @@ int	ft_printf(const char *arg, ...)
 			r += ft_padi(str[++i], list);
 		else
 		{
-			r += write(1, &s[i], 1);
+			r += write(1, &str[i], 1);
 			i++;
 		}
 	}
