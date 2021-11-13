@@ -15,9 +15,9 @@ int ft_padis(char *s);
 int	ft_padidi(va_list list);
 int	ft_padiu(const char arg, va_list list);
 int	ft_padip(const char arg, va_list list);
-int	ft_padix(const char arg, va_list list);
-int	ft_padibx(const char arg, va_list list);
-static void	putbase(unsigned long long i, char *t);
+int	ft_padix(va_list list);
+int	ft_padibx(va_list list);
+static void	ft_putbase(int i, char *t);
 int	ft_putsize(unsigned long long i, char *t, void *ptr);
 int	ft_printf(const char *arg, ...);
 #endif

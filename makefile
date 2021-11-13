@@ -12,7 +12,7 @@ CC		= gcc
 
 RM		= rm -f
 
-FLAGS	= -Wall -Werror -Wextra
+CFLAGS	= -Wall -Werror -Wextra
 
 all: $(NAME)
 

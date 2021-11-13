@@ -10,13 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static void	putbase(unsigned long long i, char *t)
+#include "ft_printf.h"
+
+static void	ft_putbase(int i, char *t)
 {
-	if (nb >= ft_strlen(base))
-		putbase(nb / ft_strlen(t), t);
+	if (i >= ft_strlen(t))
+		ft_putbase(i / ft_strlen(t), t);
+	ft_putchar_fd(t[i % ft_strlen(t)], 1);
 }
 
-int	ft_putsize(unsigned long long i, char *t, void *ptr)
+int	ft_putsize(unsigned long long  i, char *t, void *ptr)
 {
 	int	r;
 
@@ -34,14 +37,14 @@ int	ft_putsize(unsigned long long i, char *t, void *ptr)
 	return (r);
 }
 
-int	ft_padix(const char arg, va_list list)
+int	ft_padix(va_list list)
 {
-	return (ft_putsize(va_arg(list, unsigned int)), "0123456789abcdef", NULL);
+	return (ft_putsize(va_arg(list, unsigned int), "0123456789abcdef", NULL));
 }
 
-int	ft_padibx(const char arg, va_list list)
+int	ft_padibx(va_list list)
 {
-	return (ft_putsize(va_arg(list, unsigned int)), "0123456789ABCDEF", NULL);
+	return (ft_putsize(va_arg(list, unsigned int), "0123456789ABCDEF", NULL));
 }
 int ft_padis(char *s)
 {
